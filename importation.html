@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Importation - Tash Autocollections</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <style>
+      .service-cards {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 2rem;
+        margin: 2rem 0;
+      }
+      .service-card {
+        background: #fff;
+        border-radius: 10px;
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+        padding: 1.5rem;
+        text-align: center;
+      }
+      .service-card img {
+        width: 100%;
+        height: 180px;
+        object-fit: cover;
+        border-radius: 8px;
+        margin-bottom: 1rem;
+      }
+      .benefits {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        align-items: center;
+        gap: 2rem;
+        margin-top: 3rem;
+      }
+      .benefits img {
+        width: 100%;
+        border-radius: 10px;
+      }
+      .benefits .text {
+        font-size: 1rem;
+        color: #333;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Header -->
+    <header>
+      <div class="nav container">
+        <i class="bx bx-menu" id="menu-icon"></i>
+        <a href="index.html" class="logo">Tash <span>Auto Collections</span></a>
+        <ul class="navbar">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="cars.html">Cars</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="services.html" class="active">Services</a></li>
+          <li><a href="blog.html">Our Blog</a></li>
+        </ul>
+      </div>
+    </header>
+
+    <!-- Main Content -->
+    <section class="container">
+      <h1>Importation Services</h1>
+      <p>
+        Let us handle your vehicle importation process from start to finish —
+        from selecting the right car overseas to delivery at your doorstep in
+        Kenya.
+      </p>
+
+      <!-- Service Cards -->
+      <h2 style="margin-top: 2rem">What’s Included</h2>
+      <div class="service-cards">
+        <div class="service-card">
+          <img
+            src="https://via.placeholder.com/400x200?text=Car+Sourcing"
+            alt="Car Sourcing"
+          />
+          <h3>Global Sourcing</h3>
+          <p>
+            Access vehicles from trusted international markets like Japan, UK,
+            South Africa, and Dubai.
+          </p>
+        </div>
+        <div class="service-card">
+          <img
+            src="https://via.placeholder.com/400x200?text=Customs+Clearance"
+            alt="Customs Clearance"
+          />
+          <h3>Customs Clearance</h3>
+          <p>
+            We handle all KRA duties, IDF, and compliance checks to ensure
+            lawful and quick clearance.
+          </p>
+        </div>
+        <div class="service-card">
+          <img
+            src="https://via.placeholder.com/400x200?text=Delivery+Assurance"
+            alt="Delivery Logistics"
+          />
+          <h3>Logistics & Delivery</h3>
+          <p>
+            Track your car from port to your location. We provide real-time
+            updates and secure transport.
+          </p>
+        </div>
+      </div>
+
+      <!-- Benefits -->
+      <h2 style="margin-top: 3rem">Why Import With Us?</h2>
+      <div class="benefits">
+        <img
+          src="https://via.placeholder.com/500x300?text=Lower+Prices"
+          alt="Affordability"
+        />
+        <div class="text">
+          <h3>1. Save Money</h3>
+          <p>
+            Get better value than local dealerships by cutting out unnecessary
+            intermediaries. Pay the true import cost.
+          </p>
+        </div>
+      </div>
+
+      <div class="benefits" style="margin-top: 2rem">
+        <div class="text">
+          <h3>2. Get Your Dream Car</h3>
+          <p>
+            Import rare trims, models, and configurations not easily found
+            locally — customized to your taste.
+          </p>
+        </div>
+        <img
+          src="https://via.placeholder.com/500x300?text=Custom+Options"
+          alt="Unique Models"
+        />
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <section class="footer">
+      <div class="footer-container container">
+        <div class="footer-box">
+          <a href="index.html" class="logo"
+            >Tash <span>Autocollections</span></a
+          >
+          <div class="social">
+            <a href="#"><i class="bx bxl-facebook"></i></a>
+            <a href="#"><i class="bx bxl-twitter"></i></a>
+            <a href="#"><i class="bx bxl-instagram"></i></a>
+            <a href="#"><i class="bx bxl-youtube"></i></a>
+            <a href="#"><i class="bx bxl-tiktok"></i></a>
+          </div>
+        </div>
+        <div class="footer-box">
+          <h3>Page</h3>
+          <a href="index.html">Home</a>
+          <a href="cars.html">Cars</a>
+          <a href="services.html">Services</a>
+          <a href="#">Sales</a>
+        </div>
+        <div class="footer-box">
+          <h3>Legal</h3>
+          <a href="#">Privacy</a>
+          <a href="#">Refund Policy</a>
+          <a href="#">Cookie Policy</a>
+        </div>
+        <div class="footer-box">
+          <h3>Contacts</h3>
+          <p>United States</p>
+          <p>Japan</p>
+          <p>Germany</p>
+        </div>
+      </div>
+    </section>
+
+    <div class="copyright">
+      <p>&#169; Samunjo Tech Solutions<br />All Rights Reserved</p>
+    </div>
+  </body>
+</html>

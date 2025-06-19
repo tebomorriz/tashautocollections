@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sourcing - Tash Autocollections</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <style>
+      .sourcing-cards {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 2rem;
+        margin: 2rem 0;
+      }
+      .sourcing-card {
+        background: #fff;
+        border-radius: 10px;
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+        padding: 1.5rem;
+        text-align: center;
+      }
+      .sourcing-card img {
+        width: 100%;
+        height: 180px;
+        object-fit: cover;
+        border-radius: 8px;
+        margin-bottom: 1rem;
+      }
+      .sourcing-benefits {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        align-items: center;
+        gap: 2rem;
+        margin-top: 3rem;
+      }
+      .sourcing-benefits img {
+        width: 100%;
+        border-radius: 10px;
+      }
+      .sourcing-benefits .text {
+        font-size: 1rem;
+        color: #333;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Header -->
+    <header>
+      <div class="nav container">
+        <i class="bx bx-menu" id="menu-icon"></i>
+        <a href="index.html" class="logo">Tash <span>Auto Collections</span></a>
+        <ul class="navbar">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="cars.html">Cars</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="services.html" class="active">Services</a></li>
+          <li><a href="blog.html">Our Blog</a></li>
+        </ul>
+      </div>
+    </header>
+
+    <!-- Main Content -->
+    <section class="container">
+      <h1>Vehicle Sourcing Services</h1>
+      <p>
+        We assist you in finding the perfect car — locally or internationally —
+        based on your budget, specifications, and style preferences.
+      </p>
+
+      <!-- Sourcing Cards -->
+      <h2 style="margin-top: 2rem">Our Sourcing Options</h2>
+      <div class="sourcing-cards">
+        <!-- Card 1 -->
+        <div class="sourcing-card">
+          <img
+            src="https://via.placeholder.com/400x200?text=Local+Sourcing"
+            alt="Local Sourcing"
+          />
+          <h3>Local Sourcing</h3>
+          <p>
+            We connect you with verified dealers within Kenya offering quality
+            pre-owned and new vehicles.
+          </p>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="sourcing-card">
+          <img
+            src="https://via.placeholder.com/400x200?text=Global+Import"
+            alt="Global Import"
+          />
+          <h3>International Sourcing</h3>
+          <p>
+            We help you import your dream car from Japan, UK, UAE, or other
+            trusted markets hassle-free.
+          </p>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="sourcing-card">
+          <img
+            src="https://via.placeholder.com/400x200?text=Custom+Orders"
+            alt="Custom Orders"
+          />
+          <h3>Custom Orders</h3>
+          <p>
+            Need specific features or trims? We locate and deliver a vehicle
+            tailored exactly to your requirements.
+          </p>
+        </div>
+      </div>
+
+      <!-- Sourcing Benefits -->
+      <h2 style="margin-top: 3rem">Benefits of Vehicle Sourcing</h2>
+
+      <div class="sourcing-benefits">
+        <img
+          src="https://via.placeholder.com/500x300?text=Wide+Options"
+          alt="Wide Selection"
+        />
+        <div class="text">
+          <h3>1. Access to a Wider Range of Vehicles</h3>
+          <p>
+            Sourcing gives you more options beyond what's available locally —
+            ensuring you get value, variety, and verified quality.
+          </p>
+        </div>
+      </div>
+
+      <div class="sourcing-benefits" style="margin-top: 2rem">
+        <div class="text">
+          <h3>2. Trusted and Transparent Process</h3>
+          <p>
+            We handle negotiations, verification, inspection, and documentation
+            for a worry-free sourcing experience.
+          </p>
+        </div>
+        <img
+          src="https://via.placeholder.com/500x300?text=Trusted+Deals"
+          alt="Trusted Sourcing"
+        />
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <section class="footer">
+      <div class="footer-container container">
+        <div class="footer-box">
+          <a href="index.html" class="logo"
+            >Tash <span>Autocollections</span></a
+          >
+          <div class="social">
+            <a href="#"><i class="bx bxl-facebook"></i></a>
+            <a href="#"><i class="bx bxl-twitter"></i></a>
+            <a href="#"><i class="bx bxl-instagram"></i></a>
+            <a href="#"><i class="bx bxl-youtube"></i></a>
+            <a href="#"><i class="bx bxl-tiktok"></i></a>
+          </div>
+        </div>
+        <div class="footer-box">
+          <h3>Page</h3>
+          <a href="index.html">Home</a>
+          <a href="cars.html">Cars</a>
+          <a href="services.html">Services</a>
+          <a href="#">Sales</a>
+        </div>
+        <div class="footer-box">
+          <h3>Legal</h3>
+          <a href="#">Privacy</a>
+          <a href="#">Refund Policy</a>
+          <a href="#">Cookie Policy</a>
+        </div>
+        <div class="footer-box">
+          <h3>Contacts</h3>
+          <p>United States</p>
+          <p>Japan</p>
+          <p>Germany</p>
+        </div>
+      </div>
+    </section>
+
+    <div class="copyright">
+      <p>&#169; Samunjo Tech Solutions<br />All Rights Reserved</p>
+    </div>
+  </body>
+</html>
