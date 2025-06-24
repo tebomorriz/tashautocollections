@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mitsubishi Models | Tash Autocollections</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <style>
+      .model-card {
+        background: #f9f9f9;
+        padding: 2rem;
+        border-radius: 10px;
+        box-shadow: 0 0 15px rgba(0, 0, 0, 0.05);
+        margin: 2rem auto;
+        max-width: 700px;
+        text-align: center;
+      }
+      .model-dropdown {
+        padding: 0.75rem 1rem;
+        font-size: 1rem;
+        border-radius: 5px;
+        border: 1px solid #ccc;
+        margin-top: 1rem;
+        width: 100%;
+        max-width: 300px;
+      }
+      .footer-spacer {
+        height: 100px;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <div class="nav container">
+        <a href="index.html" class="logo">Tash <span>Auto Collections</span></a>
+        <ul class="navbar">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="cars.html" class="active">Cars</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="blog.html">Our Blog</a></li>
+        </ul>
+      </div>
+    </header>
+
+    <section class="model-card container">
+      <h2>Explore Mitsubishi Models</h2>
+      <p>Select a version below to view more details:</p>
+      <select class="model-dropdown" onchange="location = this.value;">
+        <option selected disabled>Select Mitsubishi Model</option>
+        <option value="mitsubishi-outlander.html">Mitsubishi Outlander</option>
+        <option value="mitsubishi-pajero.html">Mitsubishi Pajero</option>
+        <option value="mitsubishi-rvr.html">Mitsubishi RVR</option>
+        <option value="mitsubishi-eclipse.html">Mitsubishi Eclipse</option>
+        <option value="mitsubishi-mirage.html">Mitsubishi Mirage</option>
+      </select>
+    </section>
+
+    <div class="footer-spacer"></div>
+
+    <footer class="footer">
+      <div class="footer-container container">
+        <div class="footer-box">
+          <a href="#" class="logo">Tash <span>Autocollections</span></a>
+          <div class="social">
+            <a href="#"><i class="bx bxl-facebook"></i></a>
+            <a href="#"><i class="bx bxl-twitter"></i></a>
+            <a href="#"><i class="bx bxl-instagram"></i></a>
+            <a href="#"><i class="bx bxl-youtube"></i></a>
+            <a href="#"><i class="bx bxl-tiktok"></i></a>
+          </div>
+        </div>
+        <div class="footer-box">
+          <h3>Page</h3>
+          <a href="index.html">Home</a>
+          <a href="cars.html">Cars</a>
+          <a href="services.html">Services</a>
+          <a href="#">Sales</a>
+        </div>
+        <div class="footer-box">
+          <h3>Legal</h3>
+          <a href="#">Privacy</a>
+          <a href="#">Refund Policy</a>
+          <a href="#">Cookie Policy</a>
+        </div>
+        <div class="footer-box">
+          <h3>Contacts</h3>
+          <p>0769855353</p>
+          <p>tash.motorske@gmail.com</p>
+          <p>Kenya</p>
+        </div>
+      </div>
+    </footer>
+
+    <div class="copyright">
+      <p>&#169; Samunjo Tech Solutions <br />All Rights Reserved</p>
+    </div>
+
+    <script src="main.js"></script>
+  </body>
+</html>

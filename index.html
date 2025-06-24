@@ -32,7 +32,12 @@
         <i class="bx bx-search" id="search-icon"></i>
         <!--search Box-->
         <div class="search-box container">
-          <input type="search" name="" id="" placeholder="Search here..." />
+          <input
+            type="search"
+            id="vehicleSearch"
+            placeholder="Search vehicles..."
+          />
+          <div id="searchResults" class="search-results"></div>
         </div>
       </div>
     </header>
@@ -46,7 +51,7 @@
           Sourcing, Purchasing and after sales support.
         </p>
         <!--home Button-->
-        <a href="#" class="btn">Discover Now</a>
+        <a href="about.html" class="btn">Get Started</a>
       </div>
     </section>
     <!-- Why Tash AutoCollections -->
@@ -107,17 +112,18 @@
       <h2 class="section-title">Meet Our Directors</h2>
       <div class="directors-grid">
         <div class="director-card">
-          <img src="images/directors/director1.jpg" alt="Director 1" />
-          <h3>Elvis Ochieng</h3>
+          <img src="images/directors/director2.jpg" alt="Director 1" />
+          <h3>David Kunguru</h3>
           <p>
-            “At Tash AutoCollections, our mission is to redefine the car
-            importation experience by combining transparency, affordability, and
-            trust.”
+            “At Tash AutoCollections, our mission is to simplify and elevate the
+            car-buying experience by offering expert consultation, hassle-free
+            sourcing, and trusted pre-purchase guidance—ensuring transparency,
+            confidence, and value at every step.”
           </p>
         </div>
         <div class="director-card">
-          <img src="images/directors/director2.jpg" alt="Director 2" />
-          <h3>David Kunguru</h3>
+          <img src="images/directors/director1.jpg" alt="Director 2" />
+          <h3>Ochieng Tebo</h3>
           <p>
             “We are committed to delivering unmatched automotive solutions. Your
             satisfaction is our motivation.”
@@ -137,21 +143,21 @@
           margin-top: 2rem;
         "
       >
-        <div class="card">
+        <div class="service-card">
           <h3>Consultation</h3>
           <p>
             Expert advice on choosing the perfect car for your needs and budget.
           </p>
           <a href="consultation.html">Read More →</a>
         </div>
-        <div class="card">
+        <div class="service-card">
           <h3>Vehicle Sourcing</h3>
           <p>
             Access to international car markets with custom sourcing options.
           </p>
           <a href="sourcing.html">Read More →</a>
         </div>
-        <div class="card">
+        <div class="service-card">
           <h3>Pre-Purchase Inspection</h3>
           <p>
             Detailed evaluation before you commit to buy — peace of mind
@@ -159,7 +165,7 @@
           </p>
           <a href="inspection.html">Read More →</a>
         </div>
-        <div class="card">
+        <div class="service-card">
           <h3>Parts</h3>
           <p>
             Detailed evaluation before you commit to buy — peace of mind
@@ -167,7 +173,7 @@
           </p>
           <a href="parts.html">Read More →</a>
         </div>
-        <div class="card">
+        <div class="service-card">
           <h3>Face-lifting</h3>
           <p>
             Detailed evaluation before you commit to buy — peace of mind
@@ -175,7 +181,7 @@
           </p>
           <a href="facelift.html">Read More →</a>
         </div>
-        <div class="card">
+        <div class="service-card">
           <h3>Wrap & PPF</h3>
           <p>
             Detailed evaluation before you commit to buy — peace of mind
@@ -183,7 +189,7 @@
           </p>
           <a href="wrap.html">Read More →</a>
         </div>
-        <div class="card">
+        <div class="service-card">
           <h3>Importation</h3>
           <p>
             Detailed evaluation before you commit to buy — peace of mind
@@ -203,7 +209,7 @@
           <h2>Need a Quote?</h2>
           <p>Fill the form and our experts will get back to you promptly.</p>
           <form
-            action="https://formspree.io/f/xyzjprlz"
+            action="https://formspree.io/f/xzzgjgon"
             method="POST"
             style="display: flex; flex-direction: column; gap: 1rem"
           >
@@ -262,7 +268,27 @@
         </div>
       </div>
     </section>
+    <!-- Chatbot Button and Box -->
+    <button class="chatbot-toggle" onclick="toggleChatbot()">💬</button>
 
+    <div class="chatbot" id="chatbot">
+      <h4>Hi! How can we help?</h4>
+      <p><strong>Q:</strong> What cars do you offer?</p>
+      <p>
+        <strong>A:</strong> We offer Toyota, Subaru, Nissan, Mazda, Mercedes,
+        Lexus, and more.
+      </p>
+      <p><strong>Q:</strong> Do you import vehicles?</p>
+      <p>
+        <strong>A:</strong> Yes, we offer custom importation services with full
+        support.
+      </p>
+      <p><strong>Q:</strong> Can I get a quote?</p>
+      <p>
+        <strong>A:</strong> Yes! Scroll up to the "Need a Quote?" section and
+        submit the form.
+      </p>
+    </div>
     <!--Copyright-->
     <div class="copyright">
       <p>
@@ -273,5 +299,73 @@
 
     <!--Link to JS-->
     <script src="main.js"></script>
+    <script>
+      function toggleChatbot() {
+        const bot = document.getElementById("chatbot");
+        bot.style.display = bot.style.display === "flex" ? "none" : "flex";
+      }
+    </script>
+    <!-- Add this new search script below -->
+    <script>
+      // Example list of vehicle names (you can expand this list)
+      const vehicleList = [
+        "Toyota Premio",
+        "Toyota Harrier",
+        "Nissan Note",
+        "Subaru Forester",
+        "Mazda Demio",
+        "Mercedes Benz C200",
+        "Lexus RX450",
+        "Toyota Fielder",
+        "Subaru Impreza",
+        "Toyota Prado",
+      ];
+
+      const searchInput = document.getElementById("vehicleSearch");
+      const resultsBox = document.getElementById("searchResults");
+
+      searchInput.addEventListener("input", () => {
+        const query = searchInput.value.toLowerCase();
+        resultsBox.innerHTML = "";
+
+        if (query.length === 0) {
+          resultsBox.style.display = "none";
+          return;
+        }
+
+        const filtered = vehicleList.filter((vehicle) =>
+          vehicle.toLowerCase().includes(query)
+        );
+
+        if (filtered.length === 0) {
+          resultsBox.innerHTML = "<p>No results found.</p>";
+        } else {
+          filtered.forEach((vehicle) => {
+            const resultItem = document.createElement("div");
+            resultItem.textContent = vehicle;
+            resultItem.className = "search-result-item";
+            resultsBox.appendChild(resultItem);
+          });
+        }
+
+        resultsBox.style.display = "block";
+      });
+
+      // Optional: Hide results when clicking outside
+      document.addEventListener("click", (e) => {
+        if (!resultsBox.contains(e.target) && e.target !== searchInput) {
+          resultsBox.style.display = "none";
+        }
+      });
+    </script>
+    <!-- WhatsApp Chat Button -->
+    <a
+      href="https://wa.me/254704978734?text=Hello%20Tash%20AutoCollections"
+      class="whatsapp-chat"
+      target="_blank"
+    >
+      <img src="images/whatsapp-icon.png" alt="" />
+      <span class="label">WhatsApp</span>
+    </a>
   </body>
 </html>
